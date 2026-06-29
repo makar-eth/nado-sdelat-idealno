@@ -1,0 +1,65 @@
+html {
+  position: relative;
+  height: 100%;
+}
+
+.page {
+  position: relative;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  padding-top: 60px;
+  background-color: #fec7ee;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(256, 256, 256, 0.3);
+}
+
+.page__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page__title {
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 116px;
+  letter-spacing: 3.5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page__title::after {
+  content: "*";
+}
+
+.page__title:hover::before {
+  /* правила для тултипа */
+  content: "На самом деле нет.\AВажнее &mdash; научиться ошибаться.";
+  position: absolute;
+  top: 180px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 36px 44px;
+  box-shadow: 0 16px 0 #000;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 0%;
+  text-align: start;
+  text-transform: none;
+  white-space: pre;
+}
